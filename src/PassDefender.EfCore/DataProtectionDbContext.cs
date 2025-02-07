@@ -17,7 +17,7 @@ public class DataProtectionDbContext(DbContextOptions<DataProtectionDbContext> o
         {
             var configuration = ConfigurationHelper.BuildConfiguration();
             var builder = new DbContextOptionsBuilder<DataProtectionDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("DataProtection"));
+                .UseSqlServer(configuration.GetConnectionString("DataProtectionDb"));
             return new DataProtectionDbContext(builder.Options);
         }
     }
